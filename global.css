@@ -124,15 +124,15 @@ body {
 @media (max-width: 768px) {
 body {
     padding: 10px; 
-    font-size: 14px; /* Adjust font size for better readability */
+    font-size: 20px; /* Adjust font size for better readability */
 }
 
 h1 {
-    font-size: 18px; /* Adjust heading size */
+    font-size: 25px; /* Adjust heading size */
 }
 
 p, li, .article, .inlinelinky, .scrolling-bar, .scrolling-text {
-    font-size: 12px; /* Adjust other text sizes */
+    font-size: 20x; /* Adjust other text sizes */
 }
 
 .container {
@@ -175,7 +175,7 @@ button {
     overflow: hidden; /* Hide overflow */
     background-color: #000;
     color: #fff;
-    font-size: 11px;
+    font-size: 20px;
     z-index: 1000; /* Ensure it stays above other content */
 }
 
