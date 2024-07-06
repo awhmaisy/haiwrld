@@ -20,7 +20,16 @@
     <h1>chat</h1>
     <p>dis page work in progress.. hopefully interactive soon woooo</p>
 
-    <div>
+    <div class="comment-section">
+        <a>Leave a Comment</a>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentsList"></div>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
