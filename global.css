@@ -124,15 +124,15 @@ body {
 @media (max-width: 768px) {
         body {
             padding: 20px; 
-            font-size: 15px; /* Adjust font size for better readability */
+            font-size: 13px; /* Adjust font size for better readability */
     }
 
     h1 {
-        font-size: 20px; /* Adjust heading size */
+        font-size: 16px; /* Adjust heading size */
     }
 
     p, li, .article, .inlinelinky, .scrolling-bar, .scrolling-text {
-        font-size: 15px; /* Adjust other text sizes */
+        font-size: 13px; /* Adjust other text sizes */
     }
 
     .container {
