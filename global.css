@@ -122,48 +122,26 @@ body {
 }
 
 @media (max-width: 768px) {
-body {
-    padding: 20px; 
-    font-size: 20px; /* Adjust font size for better readability */
-}
+        body {
+            padding: 20px; 
+            font-size: 15px; /* Adjust font size for better readability */
+    }
 
-h1 {
-    font-size: 20px; /* Adjust heading size */
-}
+    h1 {
+        font-size: 20px; /* Adjust heading size */
+    }
 
-p, li, .article, .inlinelinky, .scrolling-bar, .scrolling-text {
-    font-size: 20px; /* Adjust other text sizes */
-}
+    p, li, .article, .inlinelinky, .scrolling-bar, .scrolling-text {
+        font-size: 15px; /* Adjust other text sizes */
+    }
 
-.container {
-    padding: 20px; 
-}
+    .container {
+        padding: 20px; 
+    }
 
-button {
-    padding: 8px 16px; 
-}
-
-@media (max-width: 576px) {
-body {
-    padding: 15px; 
-    font-size: 20px; /* Increase font size for better readability */
-}
-
-h1 {
-    font-size: 20px; /* Adjust heading size */
-}
-
-p, li, .article, .inlinelinky, .scrolling-bar, .scrolling-text {
-    font-size: 20px; /* Adjust other text sizes */
-}
-
-.container {
-    padding: 5px;
-}
-
-button {
-    padding: 6px 12px; 
-}
+    button {
+        padding: 8px 16px; 
+    }
 }
 
 .scrolling-bar {
@@ -174,7 +152,7 @@ button {
     overflow: hidden; /* Hide overflow */
     background-color: #000;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     z-index: 1000; /* Ensure it stays above other content */
 }
 
