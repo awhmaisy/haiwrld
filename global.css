@@ -124,3 +124,34 @@ button:hover {
         padding: 8px 16px; 
     }
 }
+
+.scrolling-bar {
+    position: flex; /* Fix the position at the top */
+    width: 100%; /* Full width */
+    top: 100px; /* Align to the top */
+    white-space: nowrap;
+    overflow: hidden; /* Hide overflow */
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.scrolling-text {
+    display: inline-block;
+    animation: scroll 120s linear infinite; /* Adjust duration for smoother scrolling */
+}
+
+.scrolling-text::before,
+.scrolling-text::after {
+    content: attr(data-text) " " attr(data-text) " " attr(data-text) " " attr(data-text) " " attr(data-text) " " attr(data-text) " " attr(data-text) " " attr(data-text); /* Repeat the text more times */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
