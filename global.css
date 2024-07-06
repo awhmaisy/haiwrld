@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'AkkuratMono';
+    src: url('./AkkuratMono.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'AkkuratMono', monospace, sans-serif;
+    margin: 0;
+    padding: 20px 300px; 
+    background-color: black; 
+    color: #fdc2e6; 
+    box-sizing: border-box; 
+    text-align: left; 
+    overflow-x: hidden; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    margin: 0;
+    padding: 10px 0;
+    color: #fdc2e6; 
+}
+
+h1 {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #EE80C5; 
+}
+
+p {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    margin: 0;
+    padding: 10px 0;
+    font-size: 11px;
+    color: #fdc2e6; 
+}
+
+a {
+    color: #fdc2e6; 
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.inlinelinky {
+    font-family: 'AkkuratMono', monospace, sans-serif;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 11px;
+    color: white;
+}
+
+.ascii-baby {
+    font-family: monospace;
+    white-space: pre;
+}
+
+li {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    color: #fdc2e6; 
+    font-size: 11px;
+    margin: 0;
+    padding-top: 0px;
+}
+
+li {
+    list-style-type: '♡';
+    padding-inline-start: 1ch;
+  }
+
+.article {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    color: #fdc2e6; 
+    font-size: 11px;
+    text-align: justify;
+    padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black; 
+}
+
+button {
+    font-family: 'AkkuratMono', monospace, sans-serif; 
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; 
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 16px; 
+    }
+}
