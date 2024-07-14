@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "@supabase/supabase-js": "^2.44.2",
-    "update": "^0.7.4"
+    "@supabase/supabase-js": "^2.44.2"
   },
   "name": "haiwrld",
   "version": "1.0.0",
@@ -9,11 +8,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "mkdir -p dist && cp -R *.html *.js *.css dist/",
-    "update": "update"
+    "build": "node build.js"
   },
   "devDependencies": {
-    "vercel": "^34.3.1"
+    "vercel": "^28.0.0"
   },
   "author": "",
   "license": "ISC",
