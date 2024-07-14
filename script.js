@@ -2,38 +2,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.getElementById('commentForm');
     const commentsList = document.getElementById('commentsList');
 
-    form.addEventListener('submit', function (e) {
+    const supabaseClient = supabase.createClient(config.SUPABASE_URL, config.SUPABASE_API_KEY);
+
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
         const comment = document.getElementById('comment').value;
-        const timestamp = new Date().toLocaleString();
+        const timestamp = new Date().toISOString();
 
-        const commentObj = { name, comment, timestamp };
-        saveComment(commentObj);
+        const commentObj = { name, comment, created_at: timestamp };
+        await saveComment(commentObj);
         displayComment(commentObj);
 
         form.reset();
     });
 
-    function saveComment(comment) {
-        let comments = localStorage.getItem('comments');
-        comments = comments ? JSON.parse(comments) : [];
-        comments.push(comment);
-        localStorage.setItem('comments', JSON.stringify(comments));
+    async function saveComment(comment) {
+        const { data, error } = await supabaseClient
+            .from('comments')
+            .insert([comment]);
+
+        if (error) console.error('Error saving comment: ', error);
     }
 
-    function loadComments() {
-        let comments = localStorage.getItem('comments');
-        comments = comments ? JSON.parse(comments) : [];
-        comments.reverse(); // Reverse the order of comments
-        comments.forEach(comment => displayComment(comment));
+    async function loadComments() {
+        const { data, error } = await supabaseClient
+            .from('comments')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+        if (error) {
+            console.error('Error loading comments:', error);
+        } else {
+            data.forEach(comment => displayComment(comment));
+        }
     }
 
     function displayComment(comment) {
         const commentDiv = document.createElement('div');
         commentDiv.className = 'comment';
-        commentDiv.textContent = `${comment.name}: ${comment.comment} (${comment.timestamp})`;
+        commentDiv.textContent = `${comment.name}: ${comment.comment} (${new Date(comment.created_at).toLocaleString()})`;
         commentsList.appendChild(commentDiv);
     }
 

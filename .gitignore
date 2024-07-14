@@ -1,0 +1,23 @@
+# Ignore config.js file
+config.js
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env files
+.env
+.env.local
+.env.*.local
+
+# Ignore log files
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
