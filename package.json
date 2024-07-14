@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@supabase/supabase-js": "^2.44.2"
+    "@supabase/supabase-js": "^2.44.2",
+    "update": "^0.7.4"
   },
   "name": "haiwrld",
   "version": "1.0.0",
@@ -9,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "mkdir -p dist && cp -R *.html *.js *.css dist/",
+    "update": "update"
   },
   "devDependencies": {
     "vercel": "^34.3.1"
