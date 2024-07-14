@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.getElementById('commentForm');
     const commentsList = document.getElementById('commentsList');
 
-    const supabaseClient = supabase.createClient(config.SUPABASE_URL, config.SUPABASE_API_KEY);
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_API_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+        console.error('Supabase URL or API key is missing');
+        return;
+    }
+
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
